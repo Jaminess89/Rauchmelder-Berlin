@@ -1,0 +1,33 @@
+---
+import Container from '@/components/Container.astro';
+---
+
+<section class="bg-white border-y border-border py-[16px]" data-ps="src/components/home/TrustBanner.astro:trust-sec">
+  <Container class="flex flex-wrap items-center justify-between gap-6">
+    <div class="flex items-center gap-3" data-ps="src/components/home/TrustBanner.astro:seal-col">
+      <img 
+        src="https://pagesmith-cdn.com/2be62e80/images/bewertungen-siegel-e1619557995142-122.webp" 
+        alt="Ausgezeichnet" 
+        class="w-[48px] h-[48px]" data-ps="src/components/home/TrustBanner.astro:g77ixu" />
+      <div class="text-secondary" data-ps="src/components/home/TrustBanner.astro:rating">
+        <p class="text-[14px] font-black leading-tight" data-ps="src/components/home/TrustBanner.astro:mcb9kx">Verifizierte<br/>Bewertungen</p>
+        <div class="flex text-[#FFB400] text-[12px]" data-ps="src/components/home/TrustBanner.astro:stars">★★★★★</div>
+      </div>
+    </div>
+
+    <ul class="flex flex-col md:flex-row gap-4 md:gap-12 list-none p-0 m-0 text-secondary text-[14px] font-bold" data-ps="src/components/home/TrustBanner.astro:list">
+      <li class="flex items-center gap-2 uppercase tracking-tight" data-ps="src/components/home/TrustBanner.astro:item-1">
+        <svg class="w-4 h-4 text-[#1AAAE6]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+        24 Stunden Notdienst
+      </li>
+      <li class="flex items-center gap-2 uppercase tracking-tight" data-ps="src/components/home/TrustBanner.astro:item-2">
+        <svg class="w-4 h-4 text-[#1AAAE6]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+        Türöffnung ohne Schäden
+      </li>
+      <li class="flex items-center gap-2 uppercase tracking-tight" data-ps="src/components/home/TrustBanner.astro:item-3">
+        <svg class="w-4 h-4 text-[#1AAAE6]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+        Bar- & EC-Zahlung
+      </li>
+    </ul>
+  </Container>
+</section>

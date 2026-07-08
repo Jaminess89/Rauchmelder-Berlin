@@ -1,0 +1,44 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/home/Hero.astro';
+import TrustBanner from '@/components/home/TrustBanner.astro';
+import LeadIntro from '@/components/home/LeadIntro.astro';
+import PricePromise from '@/components/home/PricePromise.astro';
+import PricingTable from '@/components/home/PricingTable.astro';
+import ServicesSlider from '@/components/home/ServicesSlider.astro';
+import FAQAccordion from '@/components/home/FAQAccordion.astro';
+import USPBanner from '@/components/home/USPBanner.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": SITE.name,
+  "description": SITE.description,
+  "url": SITE.url,
+  "telephone": "+4915735981964",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Woferlstraße 5",
+    "addressLocality": "München",
+    "postalCode": "81737",
+    "addressCountry": "DE"
+  },
+  "openingHours": "Mo-Su 00:00-24:00"
+};
+---
+
+<BaseLayout 
+  title={SITE.title}
+  description={SITE.description}
+  jsonLd={jsonLd}
+>
+  <Hero />
+  <TrustBanner />
+  <LeadIntro />
+  <PricePromise />
+  <ServicesSlider />
+  <USPBanner />
+  <PricingTable />
+  <FAQAccordion />
+</BaseLayout>

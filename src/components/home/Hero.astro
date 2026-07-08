@@ -1,0 +1,71 @@
+---
+import Container from '@/components/Container.astro';
+---
+
+<section class="relative bg-[#ECF0F1] overflow-hidden" data-ps="src/components/home/Hero.astro:hero-sec">
+  <Container class="relative z-10 flex flex-col md:flex-row items-center pt-[60px] md:pt-[92px] pb-[40px] md:pb-[92px]">
+    <div class="w-full md:w-1/2 md:pr-12 text-center md:text-left mb-12 md:mb-0" data-ps="src/components/home/Hero.astro:text-col">
+      <h1 class="text-[40px] md:text-[64px] font-black text-secondary leading-[1.1] mb-4" data-ps="src/components/home/Hero.astro:h1">
+        Schlüsseldienst München
+      </h1>
+      <p class="mb-4" data-ps="src/components/home/Hero.astro:price-row">
+        <span class="inline-block bg-[#1AAAE6] text-white font-black text-[20px] md:text-[24px] px-[12px] py-[4px] rounded-[4px]" data-ps="src/components/home/Hero.astro:price">
+          Festpreis ab 29,- €
+        </span>
+      </p>
+      <div class="flex flex-col gap-3 mb-8 w-fit mx-auto md:mx-0" data-ps="src/components/home/Hero.astro:usp-list">
+      <p class="flex items-center gap-3 text-[18px] md:text-[20px] font-bold text-secondary" data-ps="src/components/home/Hero.astro:time">
+      <svg class="w-6 h-6 text-[#1AAAE6] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+      </svg>
+      in 10 – 40 Minuten vor Ort
+      </p>
+      <p class="flex items-center gap-3 text-[18px] md:text-[20px] font-bold text-secondary" data-ps="src/components/home/Hero.astro:usp-2">
+      <svg class="w-6 h-6 text-[#1AAAE6] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+      </svg>
+      Türöffnung zum Festpreis
+      </p>
+      <p class="flex items-center gap-3 text-[18px] md:text-[20px] font-bold text-secondary" data-ps="src/components/home/Hero.astro:usp-3">
+      <svg class="w-6 h-6 text-[#1AAAE6] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+      </svg>
+      Keine versteckten Kosten
+      </p>
+      <p class="flex items-center gap-3 text-[18px] md:text-[20px] font-bold text-secondary" data-ps="src/components/home/Hero.astro:usp-4">
+      <svg class="w-6 h-6 text-[#1AAAE6] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+      </svg>
+      24h Notdienst Erreichbarkeit
+      </p>
+      </div>
+      
+      <a 
+        href="tel:+4915735981964" 
+        class="inline-flex items-center gap-3 bg-primary hover:bg-primary-hover text-white text-[18px] font-bold px-[16px] py-[12px] rounded-[9px] no-underline transition-all shadow-lg"
+        data-ps="src/components/home/Hero.astro:cta"
+      >
+        <span class="text-[20px]" data-ps="src/components/home/Hero.astro:3f6ipg">0157 359 819 64</span>
+        <span data-ps="src/components/home/Hero.astro:3f6ipf">Jetzt anrufen!</span>
+      </a>
+
+      <div class="mt-8" data-ps="src/components/home/Hero.astro:trust-logos">
+        <img 
+          src="https://pagesmith-cdn.com/2be62e80/images/bewertungssiegel-e1619561593946-128.webp" 
+          alt="Verifizierte Kundenbewertungen" 
+          class="w-[128px] h-[128px] mx-auto md:mx-0" data-ps="src/components/home/Hero.astro:fibi7y" />
+      </div>
+    </div>
+
+    <div class="w-full md:w-1/2 relative" data-ps="src/components/home/Hero.astro:img-col">
+      <div class="relative rounded-2xl overflow-hidden shadow-2xl" data-ps="src/components/home/Hero.astro:img-frame">
+        <img 
+          src="https://pagesmith-cdn.com/2be62e80/images/schluesseldienst-muenchen-start-1024.webp" 
+          alt="Schlüsseldienst München Türöffnung" 
+          class="w-full h-auto object-cover"
+          loading="eager"
+          fetchpriority="high" data-ps="src/components/home/Hero.astro:fibi7x" />
+      </div>
+    </div>
+  </Container>
+</section>

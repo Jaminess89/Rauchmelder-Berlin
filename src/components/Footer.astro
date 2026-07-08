@@ -1,0 +1,40 @@
+---
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+---
+
+<footer class="bg-dark-background text-dark-foreground py-[60px]" data-ps="src/components/Footer.astro:ikmf33">
+  <Container>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12" data-ps="src/components/Footer.astro:p4vf88">
+      <div data-ps="src/components/Footer.astro:p4vf89">
+        <h2 class="text-[18px] font-bold text-white mb-6" data-ps="src/components/Footer.astro:f0091f">Schlüsseldienst München</h2>
+        <p class="text-[14px] text-dark-muted-foreground leading-relaxed" data-ps="src/components/Footer.astro:euol">
+          Ihr zuverlässiger Partner für Türöffnungen in München. 24 Stunden Notdienst zum fairen Festpreis.
+        </p>
+      </div>
+
+      <div data-ps="src/components/Footer.astro:p4vf8a">
+        <h2 class="text-[18px] font-bold text-white mb-6" data-ps="src/components/Footer.astro:f0091e">Leistungen</h2>
+        <ul class="list-none p-0 m-0 flex flex-col gap-3">
+          <li data-ps="src/components/Footer.astro:sq28dd"><a href="/leistungen/" class="text-[14px] text-dark-muted-foreground no-underline hover:text-white transition-colors" data-ps="src/components/Footer.astro:7gqc0k">Leistungen</a></li>
+          <li data-ps="src/components/Footer.astro:sq28dc"><a href="/einbruchschutz/" class="text-[14px] text-dark-muted-foreground no-underline hover:text-white transition-colors" data-ps="src/components/Footer.astro:7gqc0l">Einbruchschutz München</a></li>
+          <li data-ps="src/components/Footer.astro:sq28db"><a href="/preise/" class="text-[14px] text-dark-muted-foreground no-underline hover:text-white transition-colors" data-ps="src/components/Footer.astro:7gqc0m">Preise</a></li>
+        </ul>
+      </div>
+
+      <div data-ps="src/components/Footer.astro:p4vf8b">
+        <h2 class="text-[18px] font-bold text-white mb-6" data-ps="src/components/Footer.astro:f0091g">Rechtliches</h2>
+        <ul class="list-none p-0 m-0 flex flex-col gap-3">
+          <li data-ps="src/components/Footer.astro:sq28da"><a href="/datenschutzerklaerung/" class="text-[14px] text-dark-muted-foreground no-underline hover:text-white transition-colors" data-ps="src/components/Footer.astro:8o2pe">Datenschutzerklärung</a></li>
+          <li data-ps="src/components/Footer.astro:sq28d9"><a href="/impressum/" class="text-[14px] text-dark-muted-foreground no-underline hover:text-white transition-colors" data-ps="src/components/Footer.astro:8o2pf">Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-dark-border mt-[60px] pt-8 text-center" data-ps="src/components/Footer.astro:p4vf8c">
+      <p class="text-[13px] text-dark-muted-foreground" data-ps="src/components/Footer.astro:euom">
+        © {new Date().getFullYear()} Schlüsseldienst München. Alle Rechte vorbehalten.
+      </p>
+    </div>
+  </Container>
+</footer>

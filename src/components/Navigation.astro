@@ -4,23 +4,32 @@ import { SITE } from '@/config/site';
 ---
 
 <header id="navbar" class="sticky top-0 z-50 bg-white border-b border-border" data-ps="src/components/Navigation.astro:dt8k87">
-  <nav class="h-[80px] flex items-center" data-ps="src/components/Navigation.astro:m59h3b">
+  <nav class="h-[80px] flex items-center md:h-[68px]" data-ps="src/components/Navigation.astro:m59h3b">
     <Container class="flex justify-between items-center">
       <a href="/" class="flex items-center no-underline" data-ps="src/components/Navigation.astro:kd8n5y">
-        <span class="text-[24px] font-bold text-secondary" data-ps="src/components/Navigation.astro:logo-text">
-          <span class="font-black" data-ps="src/components/Navigation.astro:i2om6i">Schlüsseldienst</span> München
-        </span>
+        <img 
+          src="https://pagesmith-cdn.com/2be62e80/images/Bildschirmfoto-2026-07-08-um-20.46.23(1)-320-320.webp" 
+          alt={SITE.name} 
+          class="h-10 w-auto object-contain md:h-10 md:ml-16"
+          loading="eager" data-ps="src/components/Navigation.astro:d4d69u" />
       </a>
 
-      <div class="hidden md:flex items-center gap-[40px]" data-ps="src/components/Navigation.astro:gqvsdc">
-        <a href="/" class="relative text-[14px] font-bold text-secondary uppercase no-underline nav-link-active" data-ps="src/components/Navigation.astro:nav-link-home">Schlüsseldienst München</a>
-        <a href="/autooeffnung/" class="text-[14px] font-bold text-secondary uppercase no-underline hover:text-[#1AAAE6] transition-colors" data-ps="src/components/Navigation.astro:nav-link-auto">Autoöffnung</a>
-        <a href="/tresoroeffnung/" class="text-[14px] font-bold text-secondary uppercase no-underline hover:text-[#1AAAE6] transition-colors" data-ps="src/components/Navigation.astro:nav-link-tresor">Tresoröffnung</a>
+      <div class="hidden md:flex items-center gap-[40px] md:pl-0 md:ml-16" data-ps="src/components/Navigation.astro:gqvsdc">
+<a href="/tresoroeffnung/" class="text-[14px] font-bold text-secondary uppercase no-underline hover:text-[#1AAAE6] transition-colors" data-ps="src/components/Navigation.astro:nav-link-tresor">Tresoröffnung</a>
         <a href="/sicherheitstechnik/" class="text-[14px] font-bold text-secondary uppercase no-underline hover:text-[#1AAAE6] transition-colors" data-ps="src/components/Navigation.astro:nav-link-security">Sicherheitstechnik</a>
         <a href="/ueber-uns/" class="text-[14px] font-bold text-secondary uppercase no-underline hover:text-[#1AAAE6] transition-colors" data-ps="src/components/Navigation.astro:nav-link-about">Über uns</a>
       </div>
 
-      <button
+      <div class="flex items-center gap-4" data-ps="src/components/Navigation.astro:cta-container">
+        <a 
+          href="tel:+4915735981964" 
+          class="flex items-center gap-2 bg-[#1AAAE6] hover:bg-[#1AAAE6]/90 text-white text-[14px] md:text-[16px] font-bold px-3 py-2 md:px-4 md:py-2.5 rounded-[9px] no-underline transition-all shadow-sm"
+          data-ps="src/components/Navigation.astro:phone-cta"
+        >
+          <span class="whitespace-nowrap md:pl-px pl-0" data-ps="src/components/Navigation.astro:i2om6i">0157 359 819 64</span>
+        </a>
+
+        <button
         id="mobile-menu-button"
         type="button"
         class="md:hidden p-2 text-secondary"
@@ -45,7 +54,6 @@ import { SITE } from '@/config/site';
     aria-label="Mobile navigation"
    data-ps="src/components/Navigation.astro:gqvsde">
     <nav class="flex flex-col py-4 px-6 gap-4" data-ps="src/components/Navigation.astro:m59h3a">
-      <a href="/" class="text-[14px] font-bold text-secondary uppercase no-underline" data-ps="src/components/Navigation.astro:mob-link-home">Schlüsseldienst München</a>
       <a href="/autooeffnung/" class="text-[14px] font-bold text-secondary uppercase no-underline" data-ps="src/components/Navigation.astro:mob-link-auto">Autoöffnung</a>
       <a href="/tresoroeffnung/" class="text-[14px] font-bold text-secondary uppercase no-underline" data-ps="src/components/Navigation.astro:mob-link-tresor">Tresoröffnung</a>
       <a href="/sicherheitstechnik/" class="text-[14px] font-bold text-secondary uppercase no-underline" data-ps="src/components/Navigation.astro:mob-link-security">Sicherheitstechnik</a>

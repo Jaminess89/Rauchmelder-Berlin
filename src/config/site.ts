@@ -1,9 +1,10 @@
 export const SITE = {
-  name: 'Schlüsseldienst München',
-  title: 'Schlüsseldienst München 24Std. - Türöffnung ab 29€ Festpreis',
-  description: 'Der Schlüsseldienst München ✓ Monteur in 10-40 Min. vor Ort ▷ Türöffnung ohne Schäden ✓ Günstiger 24 Std. Service ✓ EC-Zahlung ☎ Jetzt anrufen!',
+  name: 'Rauchmelder Service Berlin',
+  title: 'Rauchmelder Service Berlin & Brandenburg – Installation & Wartung nach DIN 14676',
+  description: 'Rauchmelder Service Berlin ✓ Installation & Wartung nach DIN 14676 ✓ Vollständige Haftungsabsicherung ✓ Gerichtsfeste Dokumentation ✓ Kosten umlagefähig ☎ Jetzt anrufen!',
   lang: 'de',
-  url: 'https://www.schlüsseldienst-münchen.bayern/',
+  url: 'https://www.rauchmelder-service.berlin/',
+  twitterHandle: '',
   socials: {
     twitter: '',
     instagram: '',

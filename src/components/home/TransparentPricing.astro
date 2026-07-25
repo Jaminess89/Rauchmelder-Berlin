@@ -1,0 +1,65 @@
+---
+import Container from '@/components/Container.astro';
+
+const cards = [
+  {
+    title: 'Prüfung & Wartung',
+    text: 'Individuelle Prüfung und Wartung',
+    items: ['Funktionsprüfung', 'Statuscheck', 'Protokollierung', 'Mängeldokumentation'],
+    icon: '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',
+  },
+  {
+    title: 'Installation & Austausch',
+    text: 'Fachgerechte Installation oder Austausch',
+    items: ['Geräte nach Bedarf', 'Alte Geräte fachgerecht ersetzen', 'Sichere Montage', 'Funktionsprüfung inklusive'],
+    icon: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+  },
+  {
+    title: 'Lösungen für Hausverwaltungen',
+    text: 'Individuelle Konzepte für größere Bestände',
+    items: ['Objektanalyse und Planung', 'Rahmenvereinbarungen', 'Zentrale Übersicht', 'Digitale Lösungen'],
+    icon: '<rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01M8 14h.01M16 14h.01M12 14h.01"/>',
+  },
+];
+
+const trust = ['Transparente Positionen', 'Klare Angebote', 'Kein unnötiger Austausch', 'Nachvollziehbar kalkuliert'];
+---
+
+<section class="py-14 md:py-20 bg-white" data-ps="src/components/home/TransparentPricing.astro:section">
+  <Container>
+    <h2 class="text-2xl md:text-4xl font-extrabold text-secondary text-center mb-3 tracking-tight" data-ps="src/components/home/TransparentPricing.astro:title">Transparente Kosten</h2>
+    <p class="text-gray-500 text-center text-base md:text-lg mb-10 md:mb-14" data-ps="src/components/home/TransparentPricing.astro:subtitle">Faire, nachvollziehbare Angebote – individuell auf Ihr Objekt abgestimmt.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10" data-ps="src/components/home/TransparentPricing.astro:grid">
+      {cards.map((c) => (
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow p-7 flex flex-col gap-4">
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#3F789E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 shrink-0" aria-hidden="true" set:html={c.icon} />
+            <div>
+              <h3 class="text-lg font-bold text-[#133A6B] leading-tight">{c.title}</h3>
+              <p class="text-[13px] text-gray-400">{c.text}</p>
+            </div>
+          </div>
+          <ul class="flex flex-col gap-2.5 pt-3 border-t border-gray-50">
+            {c.items.map((item) => (
+              <li class="flex items-start gap-2.5 text-sm text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4B9511" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4.5 h-4.5 w-[18px] h-[18px] shrink-0 mt-0.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-x-10 gap-y-4" data-ps="src/components/home/TransparentPricing.astro:trust">
+      {trust.map((t) => (
+        <span class="flex items-center gap-2 text-sm font-semibold text-gray-600">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#4B9511" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          {t}
+        </span>
+      ))}
+    </div>
+    {/* TODO: Konkrete Preise ergänzen, sobald sie vom Auftraggeber bestätigt wurden. */}
+  </Container>
+</section>

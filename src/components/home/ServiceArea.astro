@@ -1,0 +1,44 @@
+---
+import Container from '@/components/Container.astro';
+
+const districts = [
+  'Berlin-Mitte',
+  'Friedrichshain-Kreuzberg',
+  'Pankow',
+  'Charlottenburg-Wilmersdorf',
+  'Spandau',
+  'Steglitz-Zehlendorf',
+  'Tempelhof-Schöneberg',
+  'Neukölln',
+  'Treptow-Köpenick',
+  'Marzahn-Hellersdorf',
+  'Umland auf Anfrage',
+];
+---
+
+<section class="py-14 md:py-20 bg-white" data-ps="src/components/home/ServiceArea.astro:section">
+  <Container>
+    <h2 class="text-2xl md:text-4xl font-extrabold text-secondary text-center mb-3 tracking-tight" data-ps="src/components/home/ServiceArea.astro:title">Rauchmelderservice in Berlin und Umland</h2>
+    <p class="text-gray-500 text-center text-base md:text-lg mb-10 md:mb-14" data-ps="src/components/home/ServiceArea.astro:subtitle">Wir betreuen Objekte in Berlin und ausgewählten Regionen im Umland.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto" data-ps="src/components/home/ServiceArea.astro:grid">
+      <div class="flex flex-wrap gap-2.5 justify-center md:justify-start" data-ps="src/components/home/ServiceArea.astro:chips">
+        {districts.map((d) => (
+          <span class="inline-flex items-center rounded-full bg-[#EDF3F8] border border-[#3F789E]/20 px-4 py-2 text-sm font-semibold text-[#133A6B]">{d}</span>
+        ))}
+      </div>
+
+      <!-- Dezente Berlin-Kartenillustration -->
+      <div class="flex justify-center" data-ps="src/components/home/ServiceArea.astro:map">
+        <svg viewBox="0 0 300 220" class="w-full max-w-[360px]" role="img" aria-label="Stilisierte Karte von Berlin mit Standort-Pin">
+          <rect x="10" y="10" width="280" height="200" rx="20" fill="#EDF3F8" />
+          <path d="M40 60 Q 90 30 140 55 T 250 50" stroke="#B9CFE0" stroke-width="10" fill="none" stroke-linecap="round" />
+          <path d="M30 130 Q 100 100 160 125 T 270 120" stroke="#B9CFE0" stroke-width="10" fill="none" stroke-linecap="round" />
+          <path d="M90 190 Q 120 150 170 170 T 250 175" stroke="#B9CFE0" stroke-width="10" fill="none" stroke-linecap="round" />
+          <path d="M150 60 c -22 0 -36 15 -36 33 c 0 24 36 57 36 57 s 36 -33 36 -57 c 0 -18 -14 -33 -36 -33 z" fill="#8CC63F" />
+          <circle cx="150" cy="93" r="13" fill="#ffffff" />
+        </svg>
+      </div>
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,51 @@
+---
+import Container from '@/components/Container.astro';
+
+const benefits = [
+  {
+    title: 'Weniger Aufwand',
+    text: 'Wir übernehmen Planung, Koordination und Termine.',
+    icon: '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+  },
+  {
+    title: 'Klare Dokumentation',
+    text: 'Digitale Nachweise für Prüfung und jedes Objekt.',
+    icon: '<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/>',
+  },
+  {
+    title: 'Transparente Kosten',
+    text: 'Klare Angebote und nachvollziehbare Leistungen.',
+    icon: '<circle cx="12" cy="12" r="10"/><path d="M15 9.5a3 3 0 0 0-3-1.5c-1.7 0-3 1-3 2.5s1.3 2.5 3 2.5 3 1 3 2.5-1.3 2.5-3 2.5a3 3 0 0 1-3-1.5"/><path d="M12 6v2m0 8v2"/>',
+  },
+  {
+    title: 'Fester Ansprechpartner',
+    text: 'Ein Ansprechpartner, der Ihr Objekt kennt.',
+    icon: '<circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 0 0-16 0"/>',
+  },
+  {
+    title: 'Strukturierte Abläufe',
+    text: 'Geplante Prozesse, zuverlässig umgesetzt.',
+    icon: '<path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h12"/><path d="m17 20 2 2 4-4"/>',
+  },
+  {
+    title: 'Mehr Überblick',
+    text: 'Alle Informationen zentral und übersichtlich.',
+    icon: '<path d="M3 3v16a2 2 0 0 0 2 2h16"/><rect x="7" y="13" width="3" height="6" rx="1"/><rect x="12" y="9" width="3" height="10" rx="1"/><rect x="17" y="5" width="3" height="14" rx="1"/>',
+  },
+];
+---
+
+<section class="py-14 md:py-20 bg-white" data-ps="src/components/home/PropertyManagerBenefits.astro:section">
+  <Container>
+    <h2 class="text-2xl md:text-4xl font-extrabold text-secondary text-center mb-10 md:mb-14 tracking-tight" data-ps="src/components/home/PropertyManagerBenefits.astro:title">Warum Vermieter und Hausverwaltungen mit uns arbeiten</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 md:gap-5" data-ps="src/components/home/PropertyManagerBenefits.astro:grid">
+      {benefits.map((b) => (
+        <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all p-6 flex flex-col items-center text-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#3F789E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10" aria-hidden="true" set:html={b.icon} />
+          <h3 class="text-[15px] font-bold text-[#133A6B] leading-snug">{b.title}</h3>
+          <p class="text-[13px] text-gray-500 leading-relaxed">{b.text}</p>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>

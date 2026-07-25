@@ -1,0 +1,181 @@
+---
+import Container from '@/components/Container.astro';
+
+const services = ['Bestandsprüfung', 'Prüfung und Wartung', 'Installation', 'Austausch', 'Ferninspektion', 'Komplettlösung'];
+const objectTypes = ['Wohnung', 'Mehrfamilienhaus', 'WEG', 'Gewerbeobjekt', 'Mehrere Liegenschaften', 'Sonstiges'];
+const specials = ['Altbau', 'Stuckdecke', 'Hohe Decke', 'Bewohnerkoordination', 'Funk- oder Ferninspektion'];
+const sidebarPoints = ['Unverbindlich und kostenlos', 'Schnelle Rückmeldung', 'Individuelles Angebot', 'Persönlicher Service'];
+const inputClass = 'w-full rounded-lg border border-gray-300 bg-white px-3.5 py-2.5 text-[15px] text-gray-800 placeholder:text-gray-400 focus:border-[#4B9511] focus:outline-2 focus:outline-[#4B9511]/40';
+const labelClass = 'block text-sm font-bold text-[#133A6B] mb-1.5';
+---
+
+<section id="anfrage" class="py-14 md:py-20 bg-[#EDF3F8] scroll-mt-24" data-ps="src/components/home/ObjectInquiryForm.astro:section">
+  <Container>
+    <div class="grid grid-cols-1 lg:grid-cols-3 rounded-3xl overflow-hidden shadow-lg max-w-6xl mx-auto" data-ps="src/components/home/ObjectInquiryForm.astro:grid">
+      <!-- Linke Spalte -->
+      <div class="bg-gradient-to-b from-[#0B3A64] to-[#14557A] p-8 md:p-10" data-ps="src/components/home/ObjectInquiryForm.astro:sidebar">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-3 tracking-tight" data-ps="src/components/home/ObjectInquiryForm.astro:title">Jetzt Objekt anfragen</h2>
+        <p class="text-white/75 text-base mb-8" data-ps="src/components/home/ObjectInquiryForm.astro:subtitle">In wenigen Schritten zur unverbindlichen Ersteinschätzung.</p>
+        <ul class="flex flex-col gap-4">
+          {sidebarPoints.map((p) => (
+            <li class="flex items-center gap-3 text-white font-semibold text-[15px]">
+              <span class="w-6 h-6 rounded-full bg-[#8CC63F] flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              {p}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Formular -->
+      <div class="lg:col-span-2 bg-white p-6 md:p-10" data-ps="src/components/home/ObjectInquiryForm.astro:form-wrap">
+        <!-- Schrittanzeige -->
+        <ol class="flex flex-wrap gap-2 mb-8" aria-label="Formularschritte">
+          {['Leistung', 'Objektart', 'Umfang', 'Besonderheiten', 'Kontakt'].map((step, i) => (
+            <li class="flex items-center gap-2 text-[12px] font-bold text-gray-400">
+              <span class="w-6 h-6 rounded-full bg-[#133A6B] text-white flex items-center justify-center text-[11px]">{i + 1}</span>
+              <span class="text-[#133A6B]">{step}</span>
+              {i < 4 && <span class="hidden sm:inline text-gray-300" aria-hidden="true">→</span>}
+            </li>
+          ))}
+        </ol>
+
+        <form id="inquiry-form" novalidate data-ps="src/components/home/ObjectInquiryForm.astro:form">
+          <!-- 1. Leistung -->
+          <fieldset class="mb-7">
+            <legend class={labelClass}>1. Welche Leistung benötigen Sie? <span class="text-error">*</span></legend>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              {services.map((s, i) => (
+                <label class="flex items-center gap-2 rounded-lg border border-gray-200 px-3 py-2.5 text-sm cursor-pointer has-checked:border-[#4B9511] has-checked:bg-[#8CC63F]/10 transition-colors">
+                  <input type="radio" name="leistung" value={s} required={i === 0} class="accent-[#4B9511]" />
+                  {s}
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
+          <!-- 2. Objektart -->
+          <fieldset class="mb-7">
+            <legend class={labelClass}>2. Um welche Objektart handelt es sich? <span class="text-error">*</span></legend>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              {objectTypes.map((o, i) => (
+                <label class="flex items-center gap-2 rounded-lg border border-gray-200 px-3 py-2.5 text-sm cursor-pointer has-checked:border-[#4B9511] has-checked:bg-[#8CC63F]/10 transition-colors">
+                  <input type="radio" name="objektart" value={o} required={i === 0} class="accent-[#4B9511]" />
+                  {o}
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
+          <!-- 3. Umfang -->
+          <fieldset class="mb-7">
+            <legend class={labelClass}>3. Umfang des Objekts</legend>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label for="f-gebaeude" class="text-[13px] text-gray-500">Anzahl Gebäude</label>
+                <input id="f-gebaeude" name="gebaeude" type="number" min="0" inputmode="numeric" class={inputClass} placeholder="z. B. 1" />
+              </div>
+              <div>
+                <label for="f-wohnungen" class="text-[13px] text-gray-500">Anzahl Wohnungen</label>
+                <input id="f-wohnungen" name="wohnungen" type="number" min="0" inputmode="numeric" class={inputClass} placeholder="z. B. 12" />
+              </div>
+              <div>
+                <label for="f-geraete" class="text-[13px] text-gray-500">Geschätzte Gerätezahl</label>
+                <input id="f-geraete" name="geraete" type="number" min="0" inputmode="numeric" class={inputClass} placeholder="z. B. 40" />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- 4. Besonderheiten -->
+          <fieldset class="mb-7">
+            <legend class={labelClass}>4. Besonderheiten</legend>
+            <div class="flex flex-wrap gap-2 mb-4">
+              {specials.map((sp) => (
+                <label class="flex items-center gap-2 rounded-lg border border-gray-200 px-3 py-2 text-sm cursor-pointer has-checked:border-[#4B9511] has-checked:bg-[#8CC63F]/10 transition-colors">
+                  <input type="checkbox" name="besonderheiten" value={sp} class="accent-[#4B9511]" />
+                  {sp}
+                </label>
+              ))}
+            </div>
+            <label for="f-bemerkung" class="sr-only">Weitere Besonderheiten</label>
+            <textarea id="f-bemerkung" name="bemerkung" rows="3" class={inputClass} placeholder="Weitere Hinweise zu Ihrem Objekt (optional)"></textarea>
+          </fieldset>
+
+          <!-- 5. Kontakt -->
+          <fieldset class="mb-7">
+            <legend class={labelClass}>5. Ihre Kontaktdaten</legend>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="f-name" class="text-[13px] text-gray-500">Name <span class="text-error">*</span></label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required class={inputClass} placeholder="Ihr Name" />
+              </div>
+              <div>
+                <label for="f-unternehmen" class="text-[13px] text-gray-500">Unternehmen (optional)</label>
+                <input id="f-unternehmen" name="unternehmen" type="text" autocomplete="organization" class={inputClass} placeholder="Firma / Hausverwaltung" />
+              </div>
+              <div>
+                <label for="f-telefon" class="text-[13px] text-gray-500">Telefonnummer <span class="text-error">*</span></label>
+                <input id="f-telefon" name="telefon" type="tel" autocomplete="tel" required class={inputClass} placeholder="Ihre Telefonnummer" />
+              </div>
+              <div>
+                <label for="f-email" class="text-[13px] text-gray-500">E-Mail-Adresse <span class="text-error">*</span></label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required class={inputClass} placeholder="name@example.de" />
+              </div>
+              <div>
+                <label for="f-plz" class="text-[13px] text-gray-500">Postleitzahl <span class="text-error">*</span></label>
+                <input id="f-plz" name="plz" type="text" inputmode="numeric" pattern="[0-9]{5}" autocomplete="postal-code" required class={inputClass} placeholder="z. B. 10115" />
+              </div>
+              <div>
+                <label for="f-kontaktzeit" class="text-[13px] text-gray-500">Bevorzugte Kontaktzeit (optional)</label>
+                <select id="f-kontaktzeit" name="kontaktzeit" class={inputClass}>
+                  <option value="">Bitte wählen</option>
+                  <option>Vormittags</option>
+                  <option>Nachmittags</option>
+                  <option>Abends</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Datenschutz -->
+          <div class="mb-6">
+            <label class="flex items-start gap-3 text-sm text-gray-600 cursor-pointer">
+              <input type="checkbox" name="datenschutz" required class="mt-1 accent-[#4B9511]" />
+              <span>Ich habe die Datenschutzhinweise zur Kenntnis genommen und bin mit der Verarbeitung meiner Daten zur Bearbeitung der Anfrage einverstanden. <span class="text-error">*</span> {/* TODO: Link zur Datenschutzerklärung ergänzen, sobald die Seite existiert. */}</span>
+            </label>
+          </div>
+
+          <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#81CD35] hover:bg-[#6fb52a] text-white text-base md:text-lg font-bold px-8 py-4 rounded-[10px] transition-all shadow-lg cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#133A6B]">
+            Kostenlose Ersteinschätzung anfordern
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+          <p class="text-[13px] text-gray-400 mt-3">Unverbindlich. Persönlich geprüft. Klare nächste Schritte.</p>
+
+          <p id="form-status" class="hidden mt-4 rounded-lg px-4 py-3 text-sm font-semibold" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </Container>
+</section>
+
+<script is:inline>
+  const form = document.getElementById('inquiry-form');
+  const status = document.getElementById('form-status');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      status.textContent = 'Bitte prüfen Sie Ihre Eingaben und füllen Sie alle Pflichtfelder aus.';
+      status.className = 'mt-4 rounded-lg px-4 py-3 text-sm font-semibold bg-red-50 text-red-700 border border-red-200';
+      status.classList.remove('hidden');
+      return;
+    }
+    // TODO: An echten Formular-Endpoint anbinden (z. B. E-Mail-Service oder CRM).
+    status.textContent = 'Vielen Dank für Ihre Anfrage! Wir melden uns zeitnah persönlich bei Ihnen.';
+    status.className = 'mt-4 rounded-lg px-4 py-3 text-sm font-semibold bg-green-50 text-green-700 border border-green-200';
+    status.classList.remove('hidden');
+    form.reset();
+  });
+</script>

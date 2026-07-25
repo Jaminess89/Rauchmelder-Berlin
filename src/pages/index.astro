@@ -3,8 +3,6 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Hero from '@/components/home/Hero.astro';
 import TrustBanner from '@/components/home/TrustBanner.astro';
 import SmokeAlarmServices from '@/components/home/SmokeAlarmServices.astro';
-import LeadIntro from '@/components/home/LeadIntro.astro';
-import PricePromise from '@/components/home/PricePromise.astro';
 import SplitHero from '@/components/home/SplitHero.astro';
 import FineWarning from '@/components/home/FineWarning.astro';
 import LegalConsequences from '@/components/home/LegalConsequences.astro';
@@ -14,6 +12,19 @@ import LandlordCosts from '@/components/home/LandlordCosts.astro';
 import StepProcess from '@/components/home/StepProcess.astro';
 import SmokeAlarmLacks from '@/components/home/SmokeAlarmLacks.astro';
 import SmokeAlarmChecklist from '@/components/home/SmokeAlarmChecklist.astro';
+import TransitionCTA from '@/components/home/TransitionCTA.astro';
+import PropertyManagerBenefits from '@/components/home/PropertyManagerBenefits.astro';
+import ResidentCoordination from '@/components/home/ResidentCoordination.astro';
+import RemoteInspectionComparison from '@/components/home/RemoteInspectionComparison.astro';
+import SmokeDetectorQuality from '@/components/home/SmokeDetectorQuality.astro';
+import DigitalReportPreview from '@/components/home/DigitalReportPreview.astro';
+import TransparentPricing from '@/components/home/TransparentPricing.astro';
+import CaseStudy from '@/components/home/CaseStudy.astro';
+import Testimonials from '@/components/home/Testimonials.astro';
+import ContactPerson from '@/components/home/ContactPerson.astro';
+import FAQSection from '@/components/home/FAQSection.astro';
+import ObjectInquiryForm from '@/components/home/ObjectInquiryForm.astro';
+import ServiceArea from '@/components/home/ServiceArea.astro';
 import { SITE } from '@/config/site';
 
 const jsonLd = {
@@ -25,9 +36,9 @@ const jsonLd = {
   "telephone": "+4915735981964",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Woferlstraße 5",
-    "addressLocality": "München",
-    "postalCode": "81737",
+    "streetAddress": "Musterstraße 1",
+    "addressLocality": "Berlin",
+    "postalCode": "10115",
     "addressCountry": "DE"
   },
   "openingHours": "Mo-Su 00:00-24:00"
@@ -115,6 +126,30 @@ const jsonLd = {
   <StepProcess />
   <SmokeAlarmLacks />
   <SmokeAlarmChecklist />
-  <LeadIntro />
-  <PricePromise />
+
+  <!-- Einfügepunkt: Neue Normcheck-Sektionen (alles oberhalb bleibt unverändert) -->
+  <TransitionCTA />
+  <div id="leistungen" class="scroll-mt-24">
+    <PropertyManagerBenefits />
+  </div>
+  <ResidentCoordination />
+  <RemoteInspectionComparison />
+  <SmokeDetectorQuality />
+  <div id="ablauf" class="scroll-mt-24">
+    <DigitalReportPreview />
+  </div>
+  <TransparentPricing />
+  <CaseStudy />
+  <div id="bewertungen" class="scroll-mt-24">
+    <Testimonials />
+  </div>
+  <div id="ansprechpartner" class="scroll-mt-24">
+    <ContactPerson />
+  </div>
+  <div id="faq" class="scroll-mt-24">
+    <FAQSection />
+  </div>
+  <ObjectInquiryForm />
+  <ServiceArea />
 </BaseLayout>
+

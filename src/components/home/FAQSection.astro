@@ -37,20 +37,20 @@ const faqs = [
 ];
 ---
 
-<section class="py-14 md:py-20 bg-white" data-ps="src/components/home/FAQSection.astro:section">
+<section class="py-14 md:py-20 bg-white md:pt-[50px]" data-ps="src/components/home/FAQSection.astro:section">
   <Container>
     <h2 class="text-2xl md:text-4xl font-extrabold text-secondary text-center mb-10 md:mb-14 tracking-tight" data-ps="src/components/home/FAQSection.astro:title">Häufige Fragen</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto" data-ps="src/components/home/FAQSection.astro:grid">
       {faqs.map((f, i) => (
-        <div class="faq-item bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden self-start">
+        <div class="faq-item bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden self-start" data-ps={`src/components/home/FAQSection.astro:pzmwoh-${i}`}>
           <button
             type="button"
             class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#133A6B]"
             aria-expanded="false"
             aria-controls={`faq-panel-${i}`}
             id={`faq-trigger-${i}`}
-          >
-            <span class="text-[15px] font-bold text-[#133A6B]">{f.q}</span>
+           data-ps={`src/components/home/FAQSection.astro:h4sx5i-${i}`}>
+            <span class="text-[15px] font-bold text-[#133A6B]" data-ps={`src/components/home/FAQSection.astro:lvjslz-${i}`}>{f.q}</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="faq-icon w-5 h-5 shrink-0 text-[#4B9511] transition-transform duration-300" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
           </button>
           <div
@@ -58,9 +58,9 @@ const faqs = [
             role="region"
             aria-labelledby={`faq-trigger-${i}`}
             class="faq-panel grid transition-[grid-template-rows] duration-300 ease-out [grid-template-rows:0fr]"
-          >
-            <div class="overflow-hidden">
-              <p class="px-5 pb-5 text-sm text-gray-600 leading-relaxed">{f.a}</p>
+           data-ps={`src/components/home/FAQSection.astro:pzmwoi-${i}`}>
+            <div class="overflow-hidden" data-ps={`src/components/home/FAQSection.astro:pzmwoj-${i}`}>
+              <p class="px-5 pb-5 text-sm text-gray-600 leading-relaxed" data-ps={`src/components/home/FAQSection.astro:s9ieby-${i}`}>{f.a}</p>
             </div>
           </div>
         </div>

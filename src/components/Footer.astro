@@ -10,58 +10,53 @@ const linkClass = 'text-[14px] text-dark-muted-foreground no-underline hover:tex
 <footer class="bg-dark-background text-dark-foreground" data-ps="src/components/Footer.astro:footer">
   <Container class="py-14 md:py-16">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10" data-ps="src/components/Footer.astro:grid">
-      <!-- Spalte 1: Logo & Kurztext -->
-      <div class="lg:col-span-1" data-ps="src/components/Footer.astro:brand">
-        <img
-          src="https://pagesmith-cdn.com/2be62e80/images/Bildschirmfoto-2026-07-08-um-20.46.23(1)-320-320.webp"
-          alt={SITE.name}
-          class="h-10 w-auto object-contain mb-5"
-          loading="lazy"
-        />
-        <p class="text-[14px] text-dark-muted-foreground leading-relaxed">Rauchmelder-Service für Vermieter, Eigentümer und Hausverwaltungen in Berlin und Umland.</p>
+      <!-- Spalte 1: Kurztext -->
+      <div class="lg:col-span-1 flex flex-col gap-4" data-ps="src/components/Footer.astro:brand">
+        <p class="text-[14px] text-dark-muted-foreground leading-relaxed" data-ps="src/components/Footer.astro:euon">Rauchmelder-Service für Vermieter, Eigentümer und Hausverwaltungen in Berlin und Umland.
+<br/>
+<br/>Rechtliche Angaben dienen der allgemeinen Information und ersetzen keine Rechtsberatung.</p>
       </div>
 
       <!-- Spalte 2: Leistungen -->
       <nav aria-label="Leistungen" data-ps="src/components/Footer.astro:col-services">
-        <h2 class="text-[15px] font-bold text-white mb-5">Leistungen</h2>
+        <h2 class="text-[15px] font-bold text-white mb-5" data-ps="src/components/Footer.astro:f0091d">Leistungen</h2>
         <ul class="flex flex-col gap-3">
-          <li><a href="/#anfrage" class={linkClass}>Prüfung und Wartung</a></li>
-          <li><a href="/#anfrage" class={linkClass}>Installation und Austausch</a></li>
-          <li><a href="/#anfrage" class={linkClass}>Ferninspektion</a></li>
-          <li><a href="/#anfrage" class={linkClass}>Dokumentation</a></li>
-          <li><a href="/#anfrage" class={linkClass}>Lösungen für Hausverwaltungen</a></li>
+          <li data-ps="src/components/Footer.astro:wyji5o"><a href="/#wartung" class={linkClass} data-ps="src/components/Footer.astro:7gqbzr">Prüfung und Wartung</a></li>
+          <li data-ps="src/components/Footer.astro:wyji5p"><a href="/#installation" class={linkClass} data-ps="src/components/Footer.astro:7gqc0d">Installation und Austausch</a></li>
+          <li data-ps="src/components/Footer.astro:wyji5q"><a href="/#qualitaet" class={linkClass} data-ps="src/components/Footer.astro:7gqc0e">Ferninspektion</a></li>
+          <li data-ps="src/components/Footer.astro:wyji5r"><a href="/#nachweis" class={linkClass} data-ps="src/components/Footer.astro:7gqc0f">Dokumentation</a></li>
+          <li data-ps="src/components/Footer.astro:wyji5s"><a href="/#leistungen" class={linkClass} data-ps="src/components/Footer.astro:7gqc0g">Lösungen für Hausverwaltungen</a></li>
         </ul>
       </nav>
 
       <!-- Spalte 3: Unternehmen -->
       <nav aria-label="Unternehmen" data-ps="src/components/Footer.astro:col-company">
-        <h2 class="text-[15px] font-bold text-white mb-5">Unternehmen</h2>
+        <h2 class="text-[15px] font-bold text-white mb-5" data-ps="src/components/Footer.astro:f0091c">Unternehmen</h2>
         <ul class="flex flex-col gap-3">
-          <li><a href="/#ansprechpartner" class={linkClass}>Über uns</a></li>
-          <li><a href="/#ablauf" class={linkClass}>Ablauf</a></li>
-          <li><a href="/#bewertungen" class={linkClass}>Bewertungen</a></li>
-          <li><a href="/#faq" class={linkClass}>FAQ</a></li>
-          <li><a href="/#anfrage" class={linkClass}>Kontakt</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6e"><a href="/#ansprechpartner" class={linkClass} data-ps="src/components/Footer.astro:7gqc0h">Über uns</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6f"><a href="/#ablauf" class={linkClass} data-ps="src/components/Footer.astro:7gqc0i">Ablauf</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6g"><a href="/#bewertungen" class={linkClass} data-ps="src/components/Footer.astro:7gqc0j">Bewertungen</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6h"><a href="/#faq" class={linkClass} data-ps="src/components/Footer.astro:7gqc0k">FAQ</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6i"><a href="/#anfrage" class={linkClass} data-ps="src/components/Footer.astro:7gqc0l">Kontakt</a></li>
         </ul>
       </nav>
 
       <!-- Spalte 4: Rechtliches -->
       <nav aria-label="Rechtliches" data-ps="src/components/Footer.astro:col-legal">
-        <h2 class="text-[15px] font-bold text-white mb-5">Rechtliches</h2>
+        <h2 class="text-[15px] font-bold text-white mb-5" data-ps="src/components/Footer.astro:f0091b">Rechtliches</h2>
         <ul class="flex flex-col gap-3">
-          {/* TODO: Links aktivieren, sobald Impressum- und Datenschutzseiten existieren. */}
-          <li><span class="text-[14px] text-dark-muted-foreground/50">Impressum (folgt)</span></li>
-          <li><span class="text-[14px] text-dark-muted-foreground/50">Datenschutz (folgt)</span></li>
+          <li data-ps="src/components/Footer.astro:wyji6j"><a href="/impressum/" class={linkClass} data-ps="src/components/Footer.astro:hzwfpi">Impressum</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6k"><a href="/datenschutzerklaerung/" class={linkClass} data-ps="src/components/Footer.astro:hzwfph">Datenschutz</a></li>
         </ul>
       </nav>
 
       <!-- Spalte 5: Kontakt -->
       <div data-ps="src/components/Footer.astro:col-contact">
-        <h2 class="text-[15px] font-bold text-white mb-5">Kontakt</h2>
+        <h2 class="text-[15px] font-bold text-white mb-5" data-ps="src/components/Footer.astro:f0091a">Kontakt</h2>
         <ul class="flex flex-col gap-3">
-          <li><a href="tel:+4915735981964" class={linkClass}>0157 359 819 64</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6l"><a href="tel:+493092105026" class={linkClass} data-ps="src/components/Footer.astro:7gqc0m">030 9210 5026</a></li>
           {/* TODO: Geschäftliche E-Mail-Adresse ergänzen, sobald bestätigt. */}
-          <li><span class="text-[14px] text-dark-muted-foreground">Berlin und Umland</span></li>
+          <li data-ps="src/components/Footer.astro:wyji6m"><span class="text-[14px] text-dark-muted-foreground" data-ps="src/components/Footer.astro:hzwfpg">Berlin und Umland</span></li>
         </ul>
       </div>
     </div>
@@ -69,7 +64,7 @@ const linkClass = 'text-[14px] text-dark-muted-foreground no-underline hover:tex
 
   <div class="border-t border-dark-border" data-ps="src/components/Footer.astro:bottom">
     <Container class="py-6">
-      <p class="text-[13px] text-dark-muted-foreground text-center">© {year} Normcheck. Alle Rechte vorbehalten.</p>
+      <p class="text-[13px] text-dark-muted-foreground text-center" data-ps="src/components/Footer.astro:euoo">© {year} MESSKLAR Rauchmelderservice. Alle Rechte vorbehalten.</p>
     </Container>
   </div>
 </footer>

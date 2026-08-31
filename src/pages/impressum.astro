@@ -1,0 +1,100 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Impressum – MESSKLAR Rauchmelderservice",
+  "description": "Impressum und rechtliche Angaben von MESSKLAR Rauchmelderservice (rauchmelderservice-messklar.de).",
+  "url": `${SITE.url}impressum/`
+};
+---
+
+<BaseLayout
+  title="Impressum – MESSKLAR Rauchmelderservice"
+  description="Impressum und gesetzliche Anbieterkennzeichnung gemäß § 5 DDG von MESSKLAR Rauchmelderservice."
+  jsonLd={jsonLd}
+>
+  <div class="bg-gradient-to-b from-[#3F789E] to-[#204968] text-white py-14 md:py-20" data-ps="src/pages/impressum.astro:hero">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center" data-ps="src/pages/impressum.astro:2mj8n5">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 tracking-tight" data-ps="src/pages/impressum.astro:h1">
+          Impressum
+        </h1>
+        <p class="text-white/80 text-base sm:text-lg max-w-xl mx-auto" data-ps="src/pages/impressum.astro:subtitle">
+          Gesetzliche Anbieterkennzeichnung gemäß § 5 Digitale-Dienste-Gesetz (DDG)
+        </p>
+      </div>
+    </Container>
+  </div>
+
+  <section class="py-12 md:py-16 bg-white" data-ps="src/pages/impressum.astro:content">
+    <Container>
+      <div class="max-w-3xl mx-auto prose prose-slate max-w-none text-slate-700 leading-relaxed" data-ps="src/pages/impressum.astro:legal-text">
+        <h2 class="text-2xl font-bold text-slate-900 mb-2" data-ps="src/pages/impressum.astro:company-title">Rauchmelderservice Installation & Wartung Messklar</h2>
+
+        <h3 class="text-lg font-bold text-slate-900 mt-6 mb-1" data-ps="src/pages/impressum.astro:inhaber-heading">Geschäftsführer</h3>
+        <p data-ps="src/pages/impressum.astro:inhaber-name">
+          Vladimir Povedich
+        </p>
+
+        <h3 class="text-lg font-bold text-slate-900 mt-6 mb-1" data-ps="src/pages/impressum.astro:sqe7zb">
+          Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)
+        </h3>
+        <p data-ps="src/pages/impressum.astro:ub8xtp">
+          Vladimir Povedich<br />
+          Glasbläserallee 21<br />
+          10245 Berlin<br />
+          Deutschland
+        </p>
+
+        <h3 class="text-lg font-bold text-slate-900 mt-6 mb-1" data-ps="src/pages/impressum.astro:contact-heading">Kontakt</h3>
+        <p data-ps="src/pages/impressum.astro:ub8xtn">
+          Telefon: <a href="tel:+493092105026" class="text-blue-600 hover:underline" data-ps="src/pages/impressum.astro:n7b14l">030 9210 5026</a><br />
+          E-Mail: <a href="mailto:info@rauchmelderservice-messklar.de" class="text-blue-600 hover:underline" data-ps="src/pages/impressum.astro:email-link">info@rauchmelderservice-messklar.de</a><br />
+          Anfragen: <a href="mailto:vertrieb@rauchmelderservice-messklar.de" class="text-blue-600 hover:underline" data-ps="src/pages/impressum.astro:n7b14k">vertrieb@rauchmelderservice-messklar.de</a>
+        </p>
+
+        <h3 class="text-lg font-bold text-slate-900 mt-6 mb-1" data-ps="src/pages/impressum.astro:website-heading">Website</h3>
+        <p data-ps="src/pages/impressum.astro:website-link">
+          <a href="https://rauchmelderservice-messklar.de" class="text-blue-600 hover:underline" data-ps="src/pages/impressum.astro:domain-link">rauchmelderservice-messklar.de</a>
+        </p>
+
+        <h3 class="text-lg font-bold text-slate-900 mt-8 mb-2" data-ps="src/pages/impressum.astro:haftung-inhalte-heading">Haftung für Inhalte</h3>
+        <p data-ps="src/pages/impressum.astro:haftung-inhalte-p1">
+          Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Informationen kann jedoch keine Gewähr übernommen werden, soweit gesetzlich zulässig.
+        </p>
+        <p data-ps="src/pages/impressum.astro:haftung-inhalte-p2">
+          Zwingende gesetzliche Haftungsregelungen bleiben hiervon unberührt. Sollten uns rechtswidrige oder fehlerhafte Inhalte bekannt werden, werden wir diese prüfen und erforderlichenfalls entfernen oder korrigieren.
+        </p>
+
+        <h3 class="text-lg font-bold text-slate-900 mt-8 mb-2" data-ps="src/pages/impressum.astro:haftung-links-heading">Haftung für externe Links</h3>
+        <p data-ps="src/pages/impressum.astro:haftung-links-p1">
+          Diese Website kann Links zu externen Websites Dritter enthalten. Auf deren Inhalte haben wir keinen Einfluss. Für die Inhalte der verlinkten Seiten ist der jeweilige Anbieter oder Betreiber verantwortlich.
+        </p>
+        <p data-ps="src/pages/impressum.astro:haftung-links-p2">
+          Zum Zeitpunkt der Verlinkung waren für uns keine offensichtlichen Rechtsverstöße erkennbar. Eine fortlaufende Kontrolle externer Inhalte ohne konkrete Anhaltspunkte für eine Rechtsverletzung erfolgt nicht.
+        </p>
+        <p data-ps="src/pages/impressum.astro:haftung-links-p3">
+          Sollten uns Rechtsverletzungen auf verlinkten Seiten bekannt werden, werden entsprechende Links nach Prüfung entfernt.
+        </p>
+
+        <h3 class="text-lg font-bold text-slate-900 mt-8 mb-2" data-ps="src/pages/impressum.astro:urheberrecht-heading">Urheberrecht</h3>
+        <p data-ps="src/pages/impressum.astro:urheberrecht-p1">
+          Die auf dieser Website erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht.
+        </p>
+        <p data-ps="src/pages/impressum.astro:urheberrecht-p2">
+          Die Vervielfältigung, Bearbeitung, Verbreitung oder sonstige Verwertung außerhalb der gesetzlichen Schranken des Urheberrechts bedarf der vorherigen Zustimmung des jeweiligen Rechteinhabers.
+        </p>
+        <p data-ps="src/pages/impressum.astro:urheberrecht-p3">
+          Soweit Inhalte auf dieser Website nicht vom Betreiber erstellt wurden, werden die Rechte Dritter beachtet und entsprechende Inhalte, soweit erforderlich, als solche gekennzeichnet.
+        </p>
+        <p data-ps="src/pages/impressum.astro:urheberrecht-p4">
+          Sollten Sie auf eine mögliche Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden einer Rechtsverletzung werden betroffene Inhalte nach Prüfung entfernt.
+        </p>
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

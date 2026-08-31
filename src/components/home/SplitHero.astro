@@ -2,33 +2,35 @@
 import Container from '@/components/Container.astro';
 ---
 
-<section class="relative bg-black text-white pt-20 pb-12 overflow-hidden md:pr-[-11px] md:pt-0 md:pl-0 md:mt-0 md:mb-0 md:w-full md:min-h-[600px]" data-ps="src/components/home/SplitHero.astro:sec">
-  <Container class="relative z-20 pb-24 md:pb-32">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center md:pt-0 md:h-[420px]" data-ps="src/components/home/SplitHero.astro:grid">
-      <div class="space-y-6 lg:pr-8 relative z-40" data-ps="src/components/home/SplitHero.astro:content">
+<section class="relative bg-black text-white overflow-hidden flex items-center min-h-[600px] pt-12 md:pt-16 lg:py-0 md:min-h-[650px] lg:h-[715px]" data-ps="src/components/home/SplitHero.astro:sec">
+  
+  <div class="absolute inset-0 z-0 pointer-events-none" data-ps="src/components/home/SplitHero.astro:bg-container">
+    <div class="absolute inset-x-0 bottom-0 h-[400px] lg:h-full lg:top-0 lg:bottom-0 lg:right-0 lg:left-[40%] w-full lg:w-[60%]" data-ps="src/components/home/SplitHero.astro:lzu0h">
+      <img 
+        src="https://pagesmith-cdn.com/2be62e80/images/Feuerwehr-Brand-Bild-pexels-michael-noel-3068524-4741691-1536-1536.webp" 
+        alt="Feuerwehreinsatz" 
+        class="absolute inset-0 w-full h-full object-cover object-center lg:object-right [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%)] lg:[mask-image:linear-gradient(to_right,transparent_0%,black_10%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_10%)] lg:[-webkit-mask-image:linear-gradient(to_right,transparent_0%,black_10%)]"
+        data-ps="src/components/home/SplitHero.astro:img"
+      />
+      <div class="absolute inset-x-0 bottom-0 h-1/4 lg:h-[30%] bg-gradient-to-t from-black to-transparent z-10" data-ps="src/components/home/SplitHero.astro:bottom-fade"></div>
+    </div>
+  </div>
+
+  <Container class="relative z-20 h-full w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center h-full" data-ps="src/components/home/SplitHero.astro:grid">
+      <div class="space-y-6 lg:pr-8 relative z-40 pb-[340px] sm:pb-[380px] lg:pb-0 md:mt-2 lg:mt-0" data-ps="src/components/home/SplitHero.astro:content">
         <h2 class="text-[32px] md:text-[42px] font-bold leading-tight text-white tracking-tight pb-[18px]" data-ps="src/components/home/SplitHero.astro:title">
-          Rauchmelder - Pflicht:<br/>
-          Können Sie im Ernstfall<br/>
-          <span class="relative inline-block mt-2" data-ps="src/components/home/SplitHero.astro:3nrl9k">
-            <span class="px-3 py-1 relative z-10 font-bold block" data-ps="src/components/home/SplitHero.astro:3nrl9j">alles beweisen?</span>
+          <span class="relative inline-block" data-ps="src/components/home/SplitHero.astro:3nrl9k">
+            <span class="px-3 py-1 relative z-10 font-bold block md:pl-3 md:pr-3 md:w-[572px]" data-ps="src/components/home/SplitHero.astro:3nrl9j">Rauchmelderpflicht.
+<br/>Können Sie den Nachweis vorlegen?</span>
             <svg class="absolute -bottom-[10px] left-0 w-full h-[18px] z-20 text-[#ffe500]" preserveAspectRatio="none" viewBox="0 0 100 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 6C30 1 70 1 100 3" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
             </svg>
           </span>
         </h2>
-        <p class="text-[17px] text-gray-200 max-w-xl leading-relaxed font-light pb-[18px]" data-ps="src/components/home/SplitHero.astro:desc">
-          Seit dem 1. Januar 2021 sind Rauchmelder auch in älteren Wohnungen im Berlin und Brandenburg Pflicht (§ 48 BauO Bln/BbgBO). Fehlen sie oder funktionieren sie nicht, kann die Bauaufsicht handeln.
-        </p>
+        <p class="text-[17px] text-gray-200 max-w-xl leading-relaxed font-light pb-[18px]" data-ps="src/components/home/SplitHero.astro:desc">Seit 2021 Pflicht in Berlin & Brandenburg (§ 48 BauO Bln/BbgBO). Ohne Dokumentation drohen Bußgelder und Haftungsrisiken.</p>
       </div>
-      <div class="relative h-[350px] md:h-[450px] w-full overflow-hidden" data-ps="src/components/home/SplitHero.astro:image-wrapper">
-        <img 
-          src="https://pagesmith-cdn.com/2be62e80/images/Rauchwarnmelder-macht-alarm-1024.webp" 
-          alt="Rauchwarnmelder" 
-          class="absolute inset-0 w-full h-full object-cover object-right md:mb-0 md:pr-[-18px] md:pt-[-11px] md:w-[523px] md:mt-0 md:mr-0 md:ml-[7px] md:h-[458px]"
-          style="mask-image: linear-gradient(to right, transparent 0%, black 30%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);"
-          data-ps="src/components/home/SplitHero.astro:img"
-        />
-      </div>
+      <div class="hidden lg:block" data-ps="src/components/home/SplitHero.astro:lzu0i"></div>
     </div>
   </Container>
 </section>
